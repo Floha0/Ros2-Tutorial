@@ -7,7 +7,7 @@ class MyNode(Node): # inherited from Node
     def __init__(self):
         super().__init__("first_node") # create node
         self.counter = 0 # declare variable
-        self.create_timer(1.0, self.timer_callback) ## run func every 1.0 second
+        self.create_timer(1.0, self.timer_callback) ## run callback every 1.0 second
 
     def timer_callback(self):
         self.get_logger().info("Hello " + str(self.counter)) # print Hello

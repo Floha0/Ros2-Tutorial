@@ -21,7 +21,10 @@ setup(
     entry_points={
         'console_scripts': [
             "test_node = my_robot_controller.my_first_node:main",
-            "draw_circle = my_robot_controller.draw_circle:main"
+            "draw_circle = my_robot_controller.draw_circle:main",
+            "pose_subscriber = my_robot_controller.pose_subscriber:main",
+            "move_on_border = my_robot_controller.move_on_border:main",
+            "roam_around = my_robot_controller.roam_around:main"
             # executable_name = folder.file:function
         ],
     },

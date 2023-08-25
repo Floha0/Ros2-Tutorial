@@ -8,7 +8,7 @@ class DrawCircle(Node):
     def __init__(self):
         super().__init__("draw_circle")
         self.cmd_vel_pub_ = self.create_publisher(Twist, "/turtle1/cmd_vel", 10)        # Create Publisher         # msg type - topic name - queue size
-        self.create_timer(0.5, self.send_velocity_command) ## run func every 1.0 second
+        self.create_timer(0.5, self.send_velocity_command) ## run callback every 0.5 second
         self.get_logger().info("Draw circle node has been started")
 
     def send_velocity_command(self):
@@ -20,8 +20,8 @@ class DrawCircle(Node):
         
 def main(args=None):
     rclpy.init(args=args)
+    
     node = DrawCircle()
-
     rclpy.spin(node)
 
     rclpy.shutdown()
